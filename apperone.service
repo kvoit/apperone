@@ -1,0 +1,14 @@
+[Unit]
+Description=Apperone
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -m apperone
+WorkingDirectory=/home/voit/code/apperone/
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=apperone
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
